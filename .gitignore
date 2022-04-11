@@ -1,0 +1,9 @@
+/venv
+travelcomplanyblog/__pycache__
+travelcompanyblog/.DS_Store
+.DS_Store
+travelcompanyblog/core/__pycache__
+travelcompanyblog/error_pages/__pycache__
+__pycache__
+travelcomplanyblog/__pycache__
+.env 
