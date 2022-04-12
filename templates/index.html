@@ -11,6 +11,11 @@
     <!-- stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gentium+Basic&family=PT+Sans+Narrow&family=Rokkitt:wght@200&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/52c2eaac57.js" crossorigin="anonymous"></script>
     <!-- Custom styles for this template -->
     <link href="static/css/style.css" rel="stylesheet">
@@ -19,7 +24,7 @@
 <body>
     <!-- navbar -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
+    <nav id="navB" class="navbar navbar-expand-lg navbar-dark " aria-label="Eighth navbar example">
         <div class="container">
             <a class="navbar-brand" href="{{url_for('index')}}">Danny Sibley</a>
             <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
@@ -35,15 +40,247 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{url_for('resume')}}">Resume</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link " data-bs-toggle="modal" data-bs-target="#exampleModal">Contact me</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- intro section-->
+    <section id="introSec">
+        <div class="px-5 pt-5 rounded-3">
+            <div class="container-fluid py-5">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-4 text-left text-md-center mb-3 ">
+                        <img class="rounded-circle img-fluid" src="static/imgs/headshot.jpeg" alt="Profile Photo" />
+                    </div>
+                    <div class="col-sm-12 col-md-8">
+                        <h1 class="fw-bold" id="text"></h1>
+                        <p class="border-top pt-3 border-dark lead fs-4">
 
 
+
+
+                            Welcome to my site! I'm a software developer with experience in Python, SQL, Flask, AWS and
+                            Docker.
+                            I have years of engineering experience in the semiconductor industry and I'm looking to
+                            transition my
+                            career
+                            from hardware to software. Follow me on social media to see my journey as I embark on a new
+                            career path.
+
+
+
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <ul class="list-unstyled text-center list-inline">
+                            <li class="list-inline-item"><a
+                                    href=" https://www.linkedin.com/in/danny-sibley-b21466133/"><i
+                                        class="fab fa-linkedin h3"></i></a></li>
+                            <a href="https://github.com/Danny-Sibley"><i class="fab fa-github px-3 h3"></i></a>
+                            <a href="mailto: sibley.danny@gmail.com"><i class="fas fa-envelope h3"></i></a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- skills section -->
+    <section id="skills">
+        <div class="px-5 mb-4 rounded-3">
+            <div class="container-fluid ">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="pt-4 mb-3">Skills:</h1>
+                    </div>
+                </div>
+                <div class="d-flex row text-center justify-content-center">
+                    <div class="col-4">
+                        <i class="fab fa-python display-3"></i>
+                        <h2 class="text-center">Python</h2>
+                        <p class="text-center pt-1">Flask, Django, SQLAlchemy</p>
+                    </div>
+                    <div class="col-4">
+                        <i class="fab fa-docker display-3"></i>
+                        <h2 class="text-center">DevOps</h2>
+                        <p class="text-center pt-1">Docker, CI/CD, GitHub Actions, Kubernetes</p>
+                    </div>
+                    <div class="col-4">
+                        <i class="fab fa-aws display-3"></i>
+                        <h2 class="text-center">Cloud Services</h2>
+                        <p class="text-center pt-1">AWS, Azure, Google Cloud</p>
+                    </div>
+                </div>
+
+                <div class="row text-center mt-3">
+                    <div class="col-4 px-1">
+                        <i class="fas fa-database display-3"></i>
+                        <h2 class="text-center  ">Database</h2>
+                        <p class="text-center pt-1">SQL, PostgrsSQL</p>
+                    </div>
+                    <div class="col-4 px-1">
+                        <i class="fab fa-git display-3"></i>
+                        <h2 class="text-center">Version Control</h2>
+                        <p class="text-center pt-1">Git, Github</p>
+                    </div>
+                    <div class="col-4">
+                        <i class="far fa-object-group display-3"></i>
+                        <h2 class="text-center">SDLC</h2>
+                        <p class="text-center pt-1">Agile, Scrum, Waterfall</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects carousel -->
+    <section id="projects">
+        <div class="container-fluid px-5 pb-5 g-2">
+            <div class="row pt-5 align-items-center">
+                <div class="col-6  text-left ">
+                    <h1>Projects:</h1>
+                </div>
+            </div>
+            <div id="carouselExampleCaptions" class="carousel slide container fluid" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="https://parenting-with-passports.herokuapp.com/"><img src="static/imgs/PWP_BLOG.png"
+                                href="#" class="d-block w-100" alt="Travel Blog"> </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Parenting with Passports Blog</h2>
+                            <p class="h4 pb-2">Blog created using Flask, PostgreSQL, SQLAlchemy, and deployed with
+                                Heroku. </p>
+                            <p><a class="btn btn-lg btn-warning mx-3"
+                                    href="https://parenting-with-passports.herokuapp.com/">Live Demo</a><a
+                                    class="btn btn-lg btn-secondary mx-3"
+                                    href="https://github.com/Danny-Sibley/Travel_Blog_Project">GitHub</a></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://danny-sibley-mlproject.herokuapp.com/"><img src="static/imgs/ML_Project.png"
+                                class="d-block w-100" alt="ML Project"></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2 class="text-black">Machine Learning Home Price Prediction</h2>
+                            <p class="h4 pb-2 text-black">Machine learning model that was created using 3000+ home sale
+                                data points. Created using Flask, Pandas, Scikit-Learn. </p>
+                            <p><a class="btn btn-lg btn-warning mx-3"
+                                    href="https://danny-sibley-mlproject.herokuapp.com/">Live Demo</a><a
+                                    class="btn btn-lg btn-secondary mx-3"
+                                    href="https://github.com/Danny-Sibley/Housing_Prices_ML">GitHub</a></p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="https://github.com/Danny-Sibley/Space_invaders_Game"><img
+                                src="static/imgs/Space_Invaders.png" class="d-block w-100" alt="Space Invaders"></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Space Invaders Game</h2>
+                            <p class="h4 pb-2">Space Invaders game created with python and the PyGame library.</p>
+                            <p><a class="btn btn-lg btn-warning mx-3"
+                                    href="https://github.com/Danny-Sibley/Space_invaders_Game">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+    </section>
+
+    <!-- Modal -->
+    <section id="modalBody">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class=" modal-content">
+                    <div class="modal-header bg-white">
+                        <h5 class="modal-title" id="exampleModalLabel">Contact info</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-white">
+                        <form action="https://getform.io/f/8bc73bc1-0335-4fc0-ba7e-ae0eab655bc2" method="POST">
+                            <section>
+                                <div class="modal-body text-black">
+                                    <div class=" container-fluid px-5 pb-3">
+                                        <div class="row align-items-center justify-content-center">
+                                            <div class="col">
+                                                <div class="form-group py-2">
+                                                    <label class="text-white py-2 fs-5" for=" name">Name:</label>
+                                                    <input type="text" class="form-control" id="name" placeholder="Name"
+                                                        name='name'>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row align-items-center justify-content-center">
+                                            <div class="col">
+                                                <div class="form-group py-2">
+                                                    <label class="text-white py-2 fs-5" for="email">Email
+                                                        Address:</label>
+                                                    <input type="email" class="form-control" id="email"
+                                                        placeholder="Email Address" name='email'>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center">
+                                            <div class="col">
+                                                <div class="form-group py-2">
+                                                    <label class="text-white py-2 fs-5" for="message">Message:</label>
+                                                    <textarea class="form-control" id="message" rows="3"
+                                                        placeholder="Message" name='message'></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-outline-light mt-4 fs-5">Send</button>
+                                    </div>
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class=" pt-3 footer container">
+        <div class="row">
+            <p class="text-white text-center"> &copy; Website Created by Danny Sibley </p>
+            <div class="col">
+                <ul class="list-unstyled text-center list-inline">
+                    <li class="list-inline-item"><a href=" https://www.linkedin.com/in/danny-sibley-b21466133/"><i
+                                class="fab fa-linkedin h3"></i></a></li>
+                    <a href="https://github.com/Danny-Sibley"><i class="fab fa-github px-3 h3"></i></a>
+                    <a href="mailto: sibley.danny@gmail.com"><i class="fas fa-envelope h3"></i></a>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <script src="static/js/scripts.js"></script>
 </body>
 
 </html>

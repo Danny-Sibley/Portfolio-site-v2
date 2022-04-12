@@ -19,8 +19,8 @@ html {
     background-color: #E4E3E3;
 }
 
-#introSec h1 {
-    font-family: "Rokkitt", serif;
+#introSec  {
+    /* font-family: "Rokkitt", serif; */
 }
 
 .fab {
@@ -48,7 +48,7 @@ html {
 
 #skills p {
     font-family: "Rokkitt", serif;
-    color: #E4E3E3;
+    color: #bdbaba;
     size: 1rem;
     margin-top: -15px;
 }
@@ -61,6 +61,14 @@ html {
     font-family: "Rokkitt", serif;
     color: #204051;
 }
+
+#projects h2, h4,p, h3  {
+    font-family: "Rokkitt", serif;
+}
+
+.carouselbutton {
+    color: #204051;
+} 
 
 #footer {
     font-family: "Gentium Basic", serif;
