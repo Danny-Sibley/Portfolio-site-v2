@@ -61,7 +61,7 @@
                         <img class="rounded-circle img-fluid" src="static/imgs/headshot.jpeg" alt="Profile Photo" />
                     </div>
                     <div class="col-sm-12 col-md-8">
-                        <h1 class="fw-bold" id="text"></h1>
+                        <h1 id="text"></h1>
                         <p class="border-top pt-3 border-dark lead fs-4">
 
 
@@ -146,13 +146,13 @@
 
     <!-- Projects carousel -->
     <section id="projects">
-        <div class="container-fluid px-5 pb-5 g-2">
-            <div class="row pt-5 align-items-center">
-                <div class="col-6  text-left ">
-                    <h1>Projects:</h1>
-                </div>
+        <div class="row px-5 mb-4 rounded-3">
+            <div class="col-6 pt-3">
+                <h1>Projects:</h1>
             </div>
-            <div id="carouselExampleCaptions" class="carousel slide container fluid" data-bs-ride="carousel">
+        </div>
+        <div class="container-md  pb-5">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
@@ -164,37 +164,59 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <a href="https://parenting-with-passports.herokuapp.com/"><img src="static/imgs/PWP_BLOG.png"
-                                href="#" class="d-block w-100" alt="Travel Blog"> </a>
-                        <div class="carousel-caption d-none d-md-block">
+                                class="d-block w-100" alt="Travel Blog"> </a>
+                        <!-- Div only shows on med or smaller screens -->
+                        <div class="carousel-caption d-md-none bg-black rounded " style="--bs-bg-opacity: .5;">
+                            <h4>Parenting with Passports Blog</h4>
+                            <a class="btn btn-sm btn-warning mx-1"
+                                href="https://parenting-with-passports.herokuapp.com/">Demo</a><a
+                                class="btn btn-sm btn-secondary mx-1"
+                                href="https://github.com/Danny-Sibley/Travel_Blog_Project">GitHub</a>
+                        </div>
+                        <div class="carousel-caption d-none d-md-block bg-black rounded" style="--bs-bg-opacity: .5;">
                             <h2>Parenting with Passports Blog</h2>
                             <p class="h4 pb-2">Blog created using Flask, PostgreSQL, SQLAlchemy, and deployed with
                                 Heroku. </p>
-                            <p><a class="btn btn-lg btn-warning mx-3"
-                                    href="https://parenting-with-passports.herokuapp.com/">Live Demo</a><a
-                                    class="btn btn-lg btn-secondary mx-3"
+                            <p><a class="btn btn-lg btn-warning mx-1"
+                                    href="https://parenting-with-passports.herokuapp.com/">Demo</a><a
+                                    class="btn btn-lg btn-secondary mx-1"
                                     href="https://github.com/Danny-Sibley/Travel_Blog_Project">GitHub</a></p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <a href="https://danny-sibley-mlproject.herokuapp.com/"><img src="static/imgs/ML_Project.png"
                                 class="d-block w-100" alt="ML Project"></a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h2 class="text-black">Machine Learning Home Price Prediction</h2>
-                            <p class="h4 pb-2 text-black">Machine learning model that was created using 3000+ home sale
+                        <!-- Div only shows on med or smaller screens -->
+                        <div class="carousel-caption d-md-none bg-black rounded " style="--bs-bg-opacity: .5;">
+                            <h4>Machine Learning Home Price Model</h4>
+                            <a class="btn btn-sm btn-warning mx-1"
+                                href="https://danny-sibley-mlproject.herokuapp.com/">Demo</a><a
+                                class="btn btn-sm btn-secondary mx-1"
+                                href="https://github.com/Danny-Sibley/Housing_Prices_ML">GitHub</a>
+                        </div>
+                        <div class="carousel-caption d-none d-md-block bg-black rounded" style="--bs-bg-opacity: .5;">
+                            <h2>Machine Learning Home Price Model</h2>
+                            <p class="h4 pb-2">Machine learning model that was created using 3000+ home sale
                                 data points. Created using Flask, Pandas, Scikit-Learn. </p>
-                            <p><a class="btn btn-lg btn-warning mx-3"
-                                    href="https://danny-sibley-mlproject.herokuapp.com/">Live Demo</a><a
-                                    class="btn btn-lg btn-secondary mx-3"
+                            <p><a class="btn btn-lg btn-warning mx-1"
+                                    href="https://danny-sibley-mlproject.herokuapp.com/">Demo</a><a
+                                    class="btn btn-lg btn-secondary mx-1"
                                     href="https://github.com/Danny-Sibley/Housing_Prices_ML">GitHub</a></p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <a href="https://github.com/Danny-Sibley/Space_invaders_Game"><img
                                 src="static/imgs/Space_Invaders.png" class="d-block w-100" alt="Space Invaders"></a>
-                        <div class="carousel-caption d-none d-md-block">
+                        <!-- Div only shows on med or smaller screens -->
+                        <div class="carousel-caption d-md-none bg-black rounded " style="--bs-bg-opacity: .5;">
+                            <h4>Space Invaders Game</h4>
+                            <a class="btn btn-sm btn-secondary mx-1"
+                                href="https://github.com/Danny-Sibley/Space_invaders_Game">GitHub</a>
+                        </div>
+                        <div class="carousel-caption d-none d-md-block bg-black rounded" style="--bs-bg-opacity: .5;">
                             <h2>Space Invaders Game</h2>
                             <p class="h4 pb-2">Space Invaders game created with python and the PyGame library.</p>
-                            <p><a class="btn btn-lg btn-warning mx-3"
+                            <p><a class="btn btn-lg btn-secondary mx-1"
                                     href="https://github.com/Danny-Sibley/Space_invaders_Game">GitHub</a>
                         </div>
                     </div>
@@ -210,6 +232,8 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
+        </div>
+
     </section>
 
     <!-- Modal -->
@@ -219,8 +243,8 @@
                 <div class=" modal-content">
                     <div class="modal-header bg-white">
                         <h5 class="modal-title" id="exampleModalLabel">Contact info</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                        <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close">
+
                         </button>
                     </div>
                     <div class="modal-body text-white">

@@ -5,7 +5,7 @@
 
 body,
 html {
-    font-family: "PT Sans Narrow", sans-serif;
+    /* font-family: "PT Sans Narrow", sans-serif; */
     background-color: #204051;
     height: 100%;
 }
@@ -17,11 +17,9 @@ html {
 
 #introSec {
     background-color: #E4E3E3;
-}
-
-#introSec  {
     /* font-family: "Rokkitt", serif; */
 }
+
 
 .fab {
     color: #84A9AC;
@@ -62,13 +60,16 @@ html {
     color: #204051;
 }
 
-#projects h2, h4,p, h3  {
+#projects h2,
+h4,
+p,
+h3 {
     font-family: "Rokkitt", serif;
 }
 
 .carouselbutton {
     color: #204051;
-} 
+}
 
 #footer {
     font-family: "Gentium Basic", serif;
